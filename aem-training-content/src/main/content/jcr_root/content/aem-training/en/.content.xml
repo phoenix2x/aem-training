@@ -3,11 +3,12 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/aem-training"
-        cq:lastModified="{Date}2012-06-20T16:31:37.986-07:00"
-        cq:lastModifiedBy="admin"
         cq:template="/apps/aem-training/templates/exampletemplate"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
-        sling:resourceType="aem-training/components/examplepage">
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="{Long}302"
+        sling:resourceType="foundation/components/redirect"
+        redirectTarget="/content/aem-training/en/news">
     </jcr:content>
 </jcr:root>
