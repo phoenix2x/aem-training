@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Topnav dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="News">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <root
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root path"
+                        name="./root1"
+                        xtype="pathfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Second level menu"
+                        name="./multiTabNews"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="pathfield"/>
+                    </multi>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Widget"
+                title="Events">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <root
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root path"
+                        name="./root2"
+                        xtype="pathfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Second level menu"
+                        name="./multiTabEvents"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="pathfield"/>
+                    </multi>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>
