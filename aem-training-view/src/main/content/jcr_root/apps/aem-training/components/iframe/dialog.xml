@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
+    height="{Long}700"
     warnIfModified="{Boolean}false"
+    width="{Long}550"
     xtype="dialog">
     <items
         jcr:primaryType="cq:Widget"
@@ -14,14 +16,12 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <text
                         jcr:primaryType="cq:Widget"
+                        height="{Long}550"
                         hideLabel="{Boolean}true"
                         name="./text"
                         xtype="richtext">
                         <rtePlugins jcr:primaryType="nt:unstructured">
                             <inserttext
-                                jcr:primaryType="nt:unstructured"
-                                features="*"/>
-                            <myiframe
                                 jcr:primaryType="nt:unstructured"
                                 features="*"/>
                             <findreplace
@@ -39,19 +39,22 @@
                             <links
                                 jcr:primaryType="nt:unstructured"
                                 features="[modifylink,unlink,anchor]"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
                             <spellcheck
                                 jcr:primaryType="nt:unstructured"
                                 features="*"/>
                             <justify
                                 jcr:primaryType="nt:unstructured"
                                 features="*"/>
+                            <myiframe
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
                             <misctools
                                 jcr:primaryType="nt:unstructured"
                                 features="*"/>
                             <subsuperscript
-                                jcr:primaryType="nt:unstructured"
-                                features="*"/>
-                            <table
                                 jcr:primaryType="nt:unstructured"
                                 features="*"/>
                             <variables
