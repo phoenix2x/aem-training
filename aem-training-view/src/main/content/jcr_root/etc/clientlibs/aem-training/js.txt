@@ -1,4 +1,5 @@
 #base=js
 
+customRootPathPlugin.js
 rteiframepluggin.js
 my.js

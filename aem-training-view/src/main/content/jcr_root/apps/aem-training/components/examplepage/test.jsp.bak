@@ -1,0 +1,3 @@
+<%@include file="/libs/foundation/global.jsp"%>
+test.jsp
+<cq:text property="text" placeholder="pholder"/>
