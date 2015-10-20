@@ -1,5 +1,6 @@
 #base=js
 
 customRootPathPlugin.js
+customDialogPlugin.js
 rteiframepluggin.js
 my.js

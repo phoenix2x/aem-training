@@ -15,7 +15,10 @@
 --%>
     <cq:include path="topnav" resourceType="aem-training/components/topnav"/>
     <cq:include path="par" resourceType="foundation/components/title"/>
+        <%--
     <cq:include path="iframe" resourceType="aem-training/components/iframe"/>
+        --%>
+    <cq:include path="iframe" resourceType="aem-training/components/extendedDialogTest"/>
     <cq:include path="par1" resourceType="foundation/components/parsys"/>
     <div>13</div>
     <div>${bindings.testVar}</div>
