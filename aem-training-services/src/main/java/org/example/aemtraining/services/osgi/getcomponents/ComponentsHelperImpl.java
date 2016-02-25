@@ -37,8 +37,7 @@ public class ComponentsHelperImpl implements ComponentsHelper {
         org.apache.felix.scr.Component[] components = scrService.getComponents(name);
         if ((components != null) && (components.length > 0)) {
             return components[0];
-        } else {
-            return null;
         }
+        return null;
     }
 }

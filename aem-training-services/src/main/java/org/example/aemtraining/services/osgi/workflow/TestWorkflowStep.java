@@ -12,6 +12,5 @@ import com.day.cq.workflow.metadata.MetaDataMap;
 public class TestWorkflowStep implements WorkflowProcess {
     @Override
     public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap) throws WorkflowException {
-
     }
 }

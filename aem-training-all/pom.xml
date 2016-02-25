@@ -89,6 +89,11 @@
                                     <artifactId>sling-dynamic-include</artifactId>
                                     <filter>true</filter>
                                 </embedded>
+                                <!--<embedded>-->
+                                    <!--<groupId>com.squeakysand.osgi</groupId>-->
+                                    <!--<artifactId>squeakysand-osgi</artifactId>-->
+                                    <!--<filter>true</filter>-->
+                                <!--</embedded>-->
                             </embeddeds>
                             <subPackages>
                                 <subPackage>

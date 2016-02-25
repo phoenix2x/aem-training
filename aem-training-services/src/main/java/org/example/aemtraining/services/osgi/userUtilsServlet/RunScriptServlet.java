@@ -19,6 +19,8 @@ import javax.servlet.ServletException;
 import java.io.IOException;
 
 /**
+ * example usage
+ * /content/aem-training/en/news.runscript.html/apps/aem-training/components/runnablescript/runnablescript.jsp
  */
 @SlingServlet(resourceTypes = "sling/servlet/default", selectors = "runscript")
 public class RunScriptServlet extends SlingSafeMethodsServlet {
@@ -28,27 +30,37 @@ public class RunScriptServlet extends SlingSafeMethodsServlet {
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         Resource suffixResource = request.getRequestPathInfo().getSuffixResource();
 
-
         if (suffixResource != null) {
             SlingScript slingScript = suffixResource.adaptTo(SlingScript.class);
             if (slingScript != null) {
-                SlingBindings slingBindings = new SlingBindings();
-                Resource currentResource = request.getResource();
-                slingBindings.setResource(currentResource);
-                Node currentNode = currentResource.adaptTo(Node.class);
-                if (currentNode != null) {
-                    slingBindings.put("currentNode", currentNode);
-                }
-                Session session = currentResource.getResourceResolver().adaptTo(Session.class);
-                if (session != null) {
-                    slingBindings.put("currentSession", session);
-                }
+                SlingBindings slingBindings = getBindings(request, response);
 
-
-                slingBindings.setRequest(request);
-                slingBindings.setResponse(response);
                 slingScript.eval(slingBindings);
             }
         }
+    }
+
+    private SlingBindings getBindings(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+        SlingBindings slingBindings = new SlingBindings();
+
+        Resource currentResource = request.getResource();
+        slingBindings.setResource(currentResource);
+
+        Node currentNode = currentResource.adaptTo(Node.class);
+        if (currentNode != null) {
+            slingBindings.put("currentNode", currentNode);
+        }
+
+        Session session = currentResource.getResourceResolver().adaptTo(Session.class);
+        if (session != null) {
+            slingBindings.put("currentSession", session);
+        }
+
+        slingBindings.setRequest(request);
+        slingBindings.setResponse(response);
+
+        slingBindings.put("myVar", "myValue");
+
+        return slingBindings;
     }
 }

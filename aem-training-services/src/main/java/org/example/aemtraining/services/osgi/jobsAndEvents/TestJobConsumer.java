@@ -1,7 +1,5 @@
-package org.example.aemtraining.services.osgi.jobs;
+package org.example.aemtraining.services.osgi.jobsAndEvents;
 
-import com.day.cq.commons.jcr.JcrUtil;
-import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import org.apache.commons.lang.StringUtils;
 import org.apache.felix.scr.annotations.Component;
@@ -9,19 +7,12 @@ import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.*;
-import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.event.jobs.Job;
 import org.apache.sling.event.jobs.consumer.JobConsumer;
 import org.apache.sling.jcr.api.SlingRepository;
-import org.apache.sling.jcr.resource.JcrResourceConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.*;
-import javax.jcr.lock.LockException;
-import javax.jcr.nodetype.ConstraintViolationException;
-import javax.jcr.nodetype.NodeType;
-import javax.jcr.version.VersionException;
 import java.util.HashMap;
 
 /**

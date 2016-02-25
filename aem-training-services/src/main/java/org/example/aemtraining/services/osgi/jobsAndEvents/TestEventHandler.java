@@ -1,6 +1,5 @@
-package org.example.aemtraining.services.osgi.jobs;
+package org.example.aemtraining.services.osgi.jobsAndEvents;
 
-import com.day.cq.replication.ReplicationAction;
 import org.apache.commons.lang.StringUtils;
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.api.SlingConstants;
@@ -13,7 +12,6 @@ import org.osgi.service.event.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

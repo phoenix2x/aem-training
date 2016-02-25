@@ -11,21 +11,21 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.cqblueprints.taglib:cqblueprints-taglib:5.5.1" level="project" />
-    <orderEntry type="library" name="Maven: com.squeakysand.osgi:squeakysand-osgi:0.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.squeakysand:squeakysand-commons:0.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.osgi:squeakysand-osgi:0.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.jcr:squeakysand-jcr-taglib:0.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand:squeakysand-commons:0.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-io:commons-io:2.4" level="project" />
-    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.6.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.jcr:squeakysand-jcr-taglib:0.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jsoup:jsoup:1.6.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.jcr:squeakysand-jcr:0.3.0" level="project" />
-    <orderEntry type="library" name="Maven: com.squeakysand.jsp:squeakysand-jsp:0.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.jsp:squeakysand-jsp:0.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.sling:squeakysand-sling-taglib:0.3.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.squeakysand.sling:squeakysand-sling:0.3.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jcr:jcr:2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.core:4.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.core:4.2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.api:2.4.3-R1488084" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.6.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.day.cq.wcm:cq-wcm-api:5.6.2" level="project" />
@@ -35,4 +35,3 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>
-

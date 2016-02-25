@@ -46,10 +46,10 @@
             <groupId>com.squeakysand.jsp</groupId>
             <artifactId>squeakysand-jsp</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.squeakysand.osgi</groupId>
-            <artifactId>squeakysand-osgi</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.squeakysand.osgi</groupId>-->
+            <!--<artifactId>squeakysand-osgi</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.squeakysand.sling</groupId>
             <artifactId>squeakysand-sling-taglib</artifactId>
