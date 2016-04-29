@@ -3,6 +3,7 @@ package org.example.aemtraining.services.osgi.multiton;
 
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.commons.osgi.PropertiesUtil;
+import org.osgi.service.component.ComponentContext;
 
 import java.util.Map;
 
@@ -18,8 +19,28 @@ public class MultiService {
     public static final String TEST_PROP_Array = "testArray";
     private String testProp;
 
+    @Property(description = "Off - do not use versioned libs, Versioned - use versioned libs w/o minimization, Minimized - use versioned libs with minimization",
+                label = "Transformation", value = "Versioned", options  = {
+                        @PropertyOption(name = "OFF", value = "Off"),
+                        @PropertyOption(name = "VERSIONED", value = "Versioned"),
+                        @PropertyOption(name = "MINIMIZED", value = "Minimized")
+                    })
+    private static final String PROP_MINIFY = "versionedClientlibsTransformerFactory.minify";
+    private TransformationType transformationType;
+    public enum TransformationType {
+        OFF, VERSIONED, MINIMIZED;
+        public boolean isTransform() {
+            return this == VERSIONED || this == MINIMIZED;
+        }
+        public boolean isMinify() {
+            return this == MINIMIZED;
+        }
+    }
+
     @Activate
-    protected void activate(Map<String, Object> params) {
-        testProp = PropertiesUtil.toString(params.get(TEST_PROP), "");
+    protected void activate(ComponentContext context) {
+        //test change 2
+        transformationType = TransformationType.valueOf(PropertiesUtil.toString(context.getProperties().get(PROP_MINIFY), "OFF"));
+        testProp = PropertiesUtil.toString(context.getProperties().get(TEST_PROP), "");
     }
 }
