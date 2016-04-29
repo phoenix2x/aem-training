@@ -39,7 +39,7 @@ public class MultiService {
 
     @Activate
     protected void activate(ComponentContext context) {
-        //test change after push 2
+        //test change after push 3
         transformationType = TransformationType.valueOf(PropertiesUtil.toString(context.getProperties().get(PROP_MINIFY), "OFF"));
         testProp = PropertiesUtil.toString(context.getProperties().get(TEST_PROP), "");
     }
