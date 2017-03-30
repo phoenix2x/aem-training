@@ -42,16 +42,21 @@
             <artifactId>aem-training-taglib</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>${project.groupId}</groupId>-->
-            <!--<artifactId>aem-training-services</artifactId>-->
-            <!--<version>${project.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>aem-training-services</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.cqblueprints.taglib</groupId>
             <artifactId>cqblueprints-taglib-all</artifactId>
             <version>5.5.1</version>
             <type>zip</type>
+        </dependency>
+        <!--SDI-->
+        <dependency>
+            <groupId>com.cognifide.cq</groupId>
+            <artifactId>sling-dynamic-include</artifactId>
         </dependency>
     </dependencies>
 
@@ -79,6 +84,16 @@
                                     <artifactId>aem-training-taglib</artifactId>
                                     <filter>true</filter>
                                 </embedded>
+                                <embedded>
+                                    <groupId>com.cognifide.cq</groupId>
+                                    <artifactId>sling-dynamic-include</artifactId>
+                                    <filter>true</filter>
+                                </embedded>
+                                <!--<embedded>-->
+                                    <!--<groupId>com.squeakysand.osgi</groupId>-->
+                                    <!--<artifactId>squeakysand-osgi</artifactId>-->
+                                    <!--<filter>true</filter>-->
+                                <!--</embedded>-->
                             </embeddeds>
                             <subPackages>
                                 <subPackage>

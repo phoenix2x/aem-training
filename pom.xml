@@ -22,7 +22,8 @@
             the following CQ connection properties are the default out-of-the-box CQ settings and are used by all modules in this project.
             you should override them in your local settings.xml file if your CQ environment is different.
         -->
-        <cq.host>localhost</cq.host>
+        <!--<cq.host>10.9.197.10</cq.host>-->
+        <cq.host>127.0.0.1</cq.host>
         <cq.port>4502</cq.port>
         <cq.user>admin</cq.user>
         <cq.password>admin</cq.password>
@@ -49,7 +50,7 @@
 
     <modules>
         <module>aem-training-view</module>
-        <!--<module>aem-training-services</module>-->
+        <module>aem-training-services</module>
         <module>aem-training-config</module>
         <module>aem-training-taglib</module>
         <module>aem-training-content</module>
@@ -75,18 +76,247 @@
                 <groupId>com.squeakysand.jsp</groupId>
                 <artifactId>squeakysand-jsp</artifactId>
                 <version>0.4.0</version>
+                <scope>provided</scope>
             </dependency>
-            <dependency>
-                <groupId>com.squeakysand.osgi</groupId>
-                <artifactId>squeakysand-osgi</artifactId>
-                <version>0.4.0</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.squeakysand.osgi</groupId>-->
+                <!--<artifactId>squeakysand-osgi</artifactId>-->
+                <!--<version>0.4.0</version>-->
+                <!--<scope>provided</scope>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>com.squeakysand.sling</groupId>
                 <artifactId>squeakysand-sling-taglib</artifactId>
                 <version>0.3.0</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.api</artifactId>
+            	<version>2.1.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.servlets.post</artifactId>
+            	<version>2.3.1-R1485589</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- Day CQ -->
+            <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-replication</artifactId>
+            <version>5.4.2</version>
+            <scope>provided</scope>
+            </dependency>
+            <dependency>
+               <groupId>com.day.cq.wcm</groupId>
+               <artifactId>cq-wcm-api</artifactId>
+               <version>5.6.2</version>
+               <scope>provided</scope>
+           </dependency>
+            <dependency>
+                <groupId>com.day.cq</groupId>
+                <artifactId>cq-search</artifactId>
+                <version>5.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq</groupId>
+                <artifactId>cq-tagging</artifactId>
+                <version>5.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- JCR -->
+            <dependency>
+                <groupId>javax.jcr</groupId>
+                <artifactId>jcr</artifactId>
+                <version>2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.runmode</artifactId>
+                <version>2.0.3-tlp-R818849</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.settings</artifactId>
+                <version>1.2.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.jcr.api</artifactId>
+                <version>2.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.auth.core</artifactId>
+            	<version>1.1.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.commons</groupId>
+                <artifactId>day-commons-text</artifactId>
+                <version>1.1.8</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>4.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.osgi.compendium</artifactId>
+            	<version>1.4.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr</artifactId>
+                <version>1.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.event</artifactId>
+            	<version>3.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>com.day.cqse</groupId>
+            	<artifactId>cqse-httpservice</artifactId>
+            	<version>4.1.52</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-api</artifactId>
+            	<version>2.6.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+            	<version>2.4.5</version>
+            </dependency>
+            <dependency>
+            	<groupId>com.google.collections</groupId>
+            	<artifactId>google-collections</artifactId>
+            	<version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.4.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.workflow</groupId>
+                <artifactId>cq-workflow-api</artifactId>
+                <version>5.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>com.day.cq</groupId>
+            	<artifactId>cq-commons</artifactId>
+            	<version>5.6.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.wcm</groupId>
+                <artifactId>cq-wcm-commons</artifactId>
+                <version>5.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>com.day.commons.osgi.wrapper</groupId>
+            	<artifactId>com.day.commons.osgi.wrapper.commons-lang2</artifactId>
+            	<version>2.5-0001</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>com.day.cq</groupId>
+            	<artifactId>cq-mailer</artifactId>
+            	<version>5.6.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.dam</groupId>
+                <artifactId>cq-dam-commons</artifactId>
+                <version>5.6.8</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>-->
+            	<!--<groupId>com.day.commons.osgi.wrapper</groupId>-->
+            	<!--<artifactId>com.day.commons.osgi.wrapper.commons-email</artifactId>-->
+            	<!--<version>1.2.0-0002</version>-->
+            	<!--<scope>provided</scope>-->
+            <!--</dependency>-->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.json</artifactId>
+            	<version>2.0.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.resource</artifactId>
+            	<version>2.2.9-R1483758</version>
+            	<scope>provided</scope>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.scheduler</artifactId>
+            	<version>2.3.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!--apache client-->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpclient-osgi</artifactId>
+            	<version>4.0.3</version>
+            </dependency>
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpcore-osgi</artifactId>
+            	<version>4.1</version>
+            </dependency>
+
+            <!--SDI-->
+            <dependency>
+                <groupId>com.cognifide.cq</groupId>
+                <artifactId>sling-dynamic-include</artifactId>
+                <version>2.0.4</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- JUnit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.8.2</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+
+
+
+
+
+
+
+
+
         </dependencies>
     </dependencyManagement>
 
