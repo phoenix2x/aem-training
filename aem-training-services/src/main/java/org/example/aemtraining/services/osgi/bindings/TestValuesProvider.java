@@ -1,10 +1,8 @@
 package org.example.aemtraining.services.osgi.bindings;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Properties;
-import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Service;
+import org.apache.felix.scr.annotations.*;
 import org.apache.sling.scripting.api.BindingsValuesProvider;
+import org.example.aemtraining.services.osgi.nashorn.TestNashorn;
 
 
 import javax.script.Bindings;
@@ -17,9 +15,13 @@ import javax.script.Bindings;
         @Property(name = "javax.script.name", value = "velocity")
 })
 public class TestValuesProvider implements BindingsValuesProvider{
+
+    @Reference
+    private TestNashorn testNashorn;
     @Override
     public void addBindings(Bindings bindings) {
 //        bindings.put("testVar", "testValue");
+//        bindings.put("testNashorn", testNashorn);
     }
 
 }
