@@ -30,6 +30,7 @@ public class SwapResourcePostOperation implements PostOperation {
     private static final String ACTION_PARAM = "action";
     private static final String HTML_EXTENSION = ".html";
 
+
     @Override
     public void run(SlingHttpServletRequest request, PostResponse response, SlingPostProcessor[] slingPostProcessors) {
         Resource movingResource = request.getResource();
