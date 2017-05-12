@@ -20,6 +20,7 @@
         --%>
     <cq:include path="iframe" resourceType="aem-training/components/extendedDialogTest"/>
     <cq:include path="par1" resourceType="foundation/components/parsys"/>
+<%--${bindings.gnav}--%>
     <div>13</div>
     <div>${bindings.testVar}</div>
     <div>${bindings.testMapVar}</div>
