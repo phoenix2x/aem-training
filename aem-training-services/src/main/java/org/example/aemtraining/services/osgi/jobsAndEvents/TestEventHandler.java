@@ -38,6 +38,11 @@ public class TestEventHandler implements EventHandler {
     @Reference
     private ResourceResolverFactory resolverFactory;
 
+    /**
+     * osgi event handlers don't guarantee the delivery or processing
+     * use sling jobs if you need a guarantee
+     * @param event
+     */
     @Override
     public void handleEvent(Event event) {
         try {

@@ -5,6 +5,7 @@ import org.apache.sling.jcr.api.SlingRepository;
 import org.osgi.service.component.ComponentContext;
 
 import javax.jcr.RepositoryException;
+import javax.jcr.Session;
 import javax.jcr.Workspace;
 import javax.jcr.observation.Event;
 import javax.jcr.observation.EventIterator;
@@ -19,6 +20,8 @@ public class MyJcrEventListener implements EventListener{
     @Reference
     private SlingRepository slingRepository;
 
+    private Session adminSession;
+
     @Override
     public void onEvent(final EventIterator events) {
         System.out.println("w");
@@ -27,7 +30,8 @@ public class MyJcrEventListener implements EventListener{
     @Activate
     protected void activate(ComponentContext context) {
         try {
-            slingRepository.loginAdministrative(null).getWorkspace().getObservationManager().addEventListener(this, Event.NODE_ADDED, "/content", true, null, null, false);
+            adminSession = slingRepository.loginAdministrative(null);
+            adminSession.getWorkspace().getObservationManager().addEventListener(this, Event.NODE_ADDED, "/content", true, null, null, false);
         } catch (RepositoryException e) {
 
         }
@@ -36,8 +40,12 @@ public class MyJcrEventListener implements EventListener{
     @Deactivate
     protected void deactivate(ComponentContext inContext) {
         try {
-            slingRepository.loginAdministrative(null).getWorkspace().getObservationManager().removeEventListener(this);
+            adminSession.getWorkspace().getObservationManager().removeEventListener(this);
         } catch (RepositoryException e) {
+        } finally {
+            if(adminSession !=null && adminSession.isLive()) {
+                adminSession.logout();
+            }
         }
     }
 
