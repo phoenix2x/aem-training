@@ -12,6 +12,7 @@ import org.osgi.service.event.EventAdmin;
 import java.util.HashMap;
 
 /**
+ * test2
  */
 @Component(immediate = true)
 public class EventPublisher {
