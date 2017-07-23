@@ -1,14 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('build-deploy') {
       steps {
-        sh 'mvn clean install -P auto-deploy'
+        retry(count: 2) {
+          sh 'mvn clean install -P auto-deploy'
+          sh 'echo restart'
+        }
+        
       }
     }
-    stage('restart') {
+    stage('clear cache') {
       steps {
-        sh 'echo restarting'
+        sh 'echo clearing'
       }
     }
   }
