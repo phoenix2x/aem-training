@@ -6,17 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('Sanity check') {
-            steps {
-                input "Does the staging environment look ok?"
-            }
-        }
-        stage('deploy') {
-            steps {
-                sh 'ls'
+                sh 'mvn clean install -P auto-deploy'
             }
         }
     }
