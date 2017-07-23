@@ -85,6 +85,10 @@
             <artifactId>cq-tagging</artifactId>
         </dependency>
         <dependency>
+        	<groupId>com.adobe.granite</groupId>
+        	<artifactId>com.adobe.granite.i18n</artifactId>
+        </dependency>
+        <dependency>
             <groupId>javax.jcr</groupId>
             <artifactId>jcr</artifactId>
         </dependency>
@@ -213,6 +217,15 @@
                     <!--
                         Use the sling plugin to automatically deploy the bundle to the JCR tree
                     -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.5.1</version>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.sling</groupId>
                         <artifactId>maven-sling-plugin</artifactId>
