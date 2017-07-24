@@ -8,16 +8,34 @@ pipeline {
       post {
         always {
           sh 'restarting'
+          
         }
+        
         failure {
           sh 'mvn clean install -P auto-deploy'
           sh 'restarting'
+          
         }
+        
       }
     }
     stage('clear cache') {
       steps {
-        sh 'echo clearing'
+        parallel(
+          "clear cache": {
+            sh 'echo clearing'
+            
+          },
+          "asd": {
+            sh 'echo asd'
+            
+          }
+        )
+      }
+    }
+    stage('asd') {
+      steps {
+        sh 'echo asd'
       }
     }
   }
